@@ -23,7 +23,11 @@ echo
 yes_no "Install Oh My Zsh" && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 echo
 
-ZSH_CUSTOM="$ZSH/custom"
+ZSH=${ZSH:-$HOME/.oh-my-zsh}
+ZSH_CUSTOM=${ZSH_CUSTOM:-$ZSH/custom}
+
+yes_no "Install powerlevel10k" && git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+echo
 
 yes_no "Install zsh dependencies" && {
     sudo git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
