@@ -36,8 +36,8 @@ yes_no "Install zsh dependencies" && {
 echo
 
 yes_no "Symlink dotfiles" && {
-    ln -sf $PWD/.zshrc ~/.zshrc
-    ln -sf $PWD/.p10k.zsh ~/.p10k.zsh
+    ln -sf $PWD/.zshrc $HOME/.zshrc
+    ln -sf $PWD/.p10k.zsh $HOME/.p10k.zsh
 }
 echo
 
