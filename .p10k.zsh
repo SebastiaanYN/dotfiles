@@ -117,8 +117,8 @@
 
     if (( $1 )); then
       # Styling for up-to-date Git status.
-      local        meta='%248F'  # grey foreground
-      local       clean='%076F'  # green foreground
+      local        meta='%242F'  # grey foreground
+      local       clean='%002F'  # green foreground
       local state_color='%001F'  # red foreground
     else
       # Styling for incomplete and stale Git status.
