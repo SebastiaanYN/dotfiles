@@ -78,10 +78,40 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  # general
+  colored-man-pages
+  colorize # requires pygments
+  sudo
+  ubuntu
+  ufw
+
+  # git
+  git
+
+  # rust
+  cargo
+  rust
+  rustup
+
+  # docker
+  docker-compose
+  docker
+
+  # node
+  nvm
+  npm
+  yarn
+
+  # python
+  pep8
+  pip
+
+  # redis
+  redis-cli
+
+  # custom
   zsh-autosuggestions
   zsh-syntax-highlighting
-
-  git
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -111,9 +141,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Enable nvm
-[[ -s $HOME/.nvm/nvm.sh ]] && source $HOME/.nvm/nvm.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
