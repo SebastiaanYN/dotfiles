@@ -14,6 +14,7 @@ function yes_no() {
 yes_no "Install zsh" && sudo apt install zsh
 echo
 
+echo "Zsh version:"
 zsh --version
 echo
 
@@ -38,6 +39,11 @@ echo
 yes_no "Symlink dotfiles" && {
     ln -sf $PWD/.zshrc $HOME/.zshrc
     ln -sf $PWD/.p10k.zsh $HOME/.p10k.zsh
+}
+echo
+
+yes_no "Copy cron jobs" && {
+    sudo cp $PWD/cron.d/* /etc/cron.d
 }
 echo
 
