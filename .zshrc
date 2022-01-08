@@ -89,9 +89,7 @@ plugins=(
   git
 
   # rust
-  cargo
   rust
-  rustup
 
   # docker
   docker-compose
